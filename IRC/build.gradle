@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.java-websocket/Java-WebSocket
+    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.3'
+    // gson
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.8'
+    // mysql connector
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+    // commons codec
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
